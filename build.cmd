@@ -235,6 +235,7 @@ curl.exe -sfL https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/38029.pa
 git.exe apply --directory=mesa-%MESA_VERSION% patches/mesa-require-dxheaders.patch    || exit /b 1
 git.exe apply --directory=mesa-%MESA_VERSION% patches/gallium-use-tex-cache.patch     || exit /b 1
 git.exe apply --directory=mesa-%MESA_VERSION% patches/gallium-static-build.patch      || exit /b 1
+git.exe apply --directory=mesa-%MESA_VERSION% patches/test.patch                      || exit /b 1
 
 mkdir mesa-%MESA_VERSION%\subprojects\llvm                                   1>nul || exit /b 1
 copy meson\meson.llvm.build mesa-%MESA_VERSION%\subprojects\llvm\meson.build 1>nul || exit /b 1
